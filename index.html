@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>My Portfolio</title> 
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+        .header-content {
+            background :linear-gradient(to bottom, rgb(172, 148, 89), rgb(130, 98, 38));
+            padding: 10px 30px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin-top: -5px;
+            width: 1486px;
+            position: fixed;
+            z-index: 10;
+        }
+        .header-content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .header-content p {
+            font-size: 1.2em;
+        }
+
+        .pic {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            margin-bottom: 10px;
+            
+        }
+
+        .diane {
+            height: 60px;
+            margin-right: 15px;
+            padding: 5px 5px;
+            border-radius: 30px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header, nav, section, footer {
+            padding: 20px;
+        }
+        header {
+            background:#17202A;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .portfolio-item {
+            margin-bottom: 20px;
+        }
+        .portfolio-item img {
+            max-width: 100%;
+        }
+        .name {
+            padding: 5px 5px;
+            border: 2px solid white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 1em;
+            color: white;
+            background-color: rgba(71, 71, 71, 0.753);
+            cursor: default;
+        }
+        .top-buttons {
+            list-style: none;
+            display: flex;
+            justify-content: right;
+            padding: 0;
+            margin-top: -70px;
+        }
+
+        .top-buttons li {
+            margin: 0 10px;
+            padding: 5px 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgb(255, 234, 169);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .top-buttons li:hover {
+            background-color: rgba(138, 165, 140, 0.485);
+            transform: scale(1.1);
+        }
+
+        .top-buttons a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .body-content {
+            background: url(body-content.png);
+            background-size: cover;
+            padding-top: 200px;
+            width: 1518px;
+            height: 500px;
+            z-index: 2;
+            border-bottom: 5px solid white;
+            color: rgb(60, 60, 60);
+        }
+
+        .body-content h1 {
+            text-align: center;
+            padding: -10px 70px;
+        }
+
+        .body-intro {
+            font-size: 1.5em;
+        }
+
+        .body-content h3 {
+            text-align: center;
+            padding: 30px 100px;
+        }
+        .about-me {
+            background-color: rgb(222, 222, 222);
+            margin-top: 190px;
+            margin-left: -10px;
+            width: 1529px;
+            height: 750px;
+            z-index: -10;
+            color: rgb(50, 50, 50);
+        }
+
+        .about-me h2 {
+            font-size: 2.5em;
+            padding-top: 200px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+          
+        }
+
+        .about-me h2,
+        .about-me h4,
+        .about-me .resume-button {
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .button-container a {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: 2px solid white;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgb(185, 185, 185);
+            text-decoration: none;
+            font-size: 1em;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button-container a:hover {
+            background-color: rgba(138, 165, 140, 0.485);
+            transform: scale(1.1);
+        }
+        .projects {
+            background: url('images/background-neon.gif');
+
+            background-size: cover;
+            margin-top: 650px;
+            width: 1529px;
+            height: 900px;
+            z-index: -10;
+            color: rgb(57, 57, 57);
+            
+        }
+
+        .projects h2 {
+            font-size: 2em;
+            padding-top: 100px;
+        }
+
+        .projects h2,
+        .projects p {
+            text-align: center;
+        }
+
+        .projects ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .projects li {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .projects .thumbnail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s;
+           
+        }
+
+        .projects .thumbnail img {
+            height: 350px;
+            margin-bottom: 10px;
+        }
+        .projects .thumbnail:hover .school {
+            transform: scale(1.2);
+        }
+        .resume-button a{
+           
+            margin: 0 5px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1.5em;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .resume-button a:hover {
+            background-color: rgba(194, 186, 145, 0.485);
+
+            transform: scale(1.1);
+        }
+
+
+    </style>
+</head>
+<body style="background-image: url(assets/images.jpg); background-size: cover;">
+    <div class="header-content">
+        <div class="profile">
+            <div class="pic">
+                <img src="dianne.jpg" alt="Diana" class="diane">
+                <div class="name"> DIANA KABIGTING</div>
+                <div class="button-container">
+                <a href="https://github.com/DianaKabigting06" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/diane.kabigting?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+                
+            </div>
+            </div>
+        </div>
+        <ul class="top-buttons">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+        
+        </ul>
+    </div>
+    <div class="body-content">
+        <div class="body-intro">
+            <h1>Hello, I Am Diana Kabigting</h1>
+            <h3>Welcome to my portfolio!</h3>
+            
+
+        </div>
+        <div id="about" class="about-me">
+            <h2 class="about">About Me</h2>
+            <h4>I'm Diane studying at EXACT Colleges Of Asia of BSIS - Prova, I'm a hard-working person and always willing to learn new skills. </h4>
+            <h3>My Resume:</h3>
+            <div class="resume-button"><a href="dianaresume.html">Resume</a></div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="projects" class="projects">
+        <h2 class="project-text">Projects</h2>
+        <ul>
+            <li>
+                <div class="thumbnail">
+                    <a href="rizal-project.html">
+                        <img src="rizal-project.png" alt="School" class="school">
+                    </a>
+                    <div class="description">
+                        <h3> Rizal Project Film</h3>
+                        <p> This is my first film and I got the best actress award</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="thumbnail">
+                    <a href="calendar.html">
+                        <img src="calendar.png" alt="School" class="school">
+                    </a>
+                    <div class="description">
+                        <h3> Calendar</h3>
+                        <p> This is my second project</p>
+                    </div>
+                </div>
+            </li>
+            </ul>
+         </div>
+        </section>
+
+    <footer>
+        <p style="color:#008080;">© 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<script>
+    document.querySelector('.top-buttons li:nth-child(2) a').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('.top-buttons li:nth-child(3) a').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.querySelector('.top-buttons li:nth-child(4) a').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#contacts').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
